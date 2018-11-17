@@ -31,7 +31,7 @@ public class DemoBucles
     {
         System.out.println("Factores primos de diferentes números aleatorios\n" +
             "(Tope: " + n + " o hasta que salga el 50)\n");
-        int aleatorio = generador.nextInt(101) + 10;
+        int aleatorio = generador.nextInt(91) + 10;
         int contador = 1;
         while (contador <= n && aleatorio!= 50) {
             System.out.print(String.format("%8d |", aleatorio));
@@ -47,7 +47,7 @@ public class DemoBucles
                 }
             }
             System.out.println();
-            aleatorio = generador.nextInt(101) + 10;
+            aleatorio = generador.nextInt(91) + 10;
             contador++;
         }
 
