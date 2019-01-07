@@ -171,12 +171,15 @@ public class ListaNumeros
         int n = pos / 2 + pos % 2;
 
         int[] colapsado = new int[n];
-        for (int i = 0; i < n; i++) {
-            colapsado[i] = lista[2 * i] + lista[2 * i + 1];
-        }
+        int tope = n;
         if (pos % 2 != 0) {
             colapsado[colapsado.length - 1] = lista[pos - 1];
+            tope--;
         }
+        for (int i = 0; i < tope; i++) {
+            colapsado[i] = lista[2 * i] + lista[2 * i + 1];
+        }
+        
         return colapsado;
     }
 
@@ -272,7 +275,7 @@ public class ListaNumeros
      */
     public static void main(String[] args) 
     {
-        ListaNumeros lista = new ListaNumeros(10);
+        ListaNumeros lista = new ListaNumeros(7);
         lista.addElemento(4);
         lista.addElemento(-5);
         lista.addElemento(6);
@@ -280,7 +283,7 @@ public class ListaNumeros
         lista.addElemento(20);
         lista.addElemento(-17);
         lista.addElemento(12);
-        lista.addElemento(15);
+      //  lista.addElemento(15);
 
         System.out.println(lista.toString());
         int[] colapsado = lista.colapsar();
