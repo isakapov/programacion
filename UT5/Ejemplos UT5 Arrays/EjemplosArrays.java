@@ -18,14 +18,12 @@ public class EjemplosArrays
      *  Invierte los valores de un array
      *  Arrays como argumentos
      */
-    public void  invertir(int[ ]  valores)
+    public void  invertir(int[]  valores)
     {
-        int longitud = valores.length;
-        int aux;
-        int limiteDerecha = longitud - 1;
-        for (int i = 0; i < (longitud / 2); i++)
+        int limiteDerecha = valores.length - 1;
+        for (int i = 0; i < (valores.length / 2); i++)
         {
-            aux = valores[i];
+            int aux = valores[i];
             valores[i] = valores[limiteDerecha];
             valores[limiteDerecha] = aux; 
             limiteDerecha--;
@@ -36,14 +34,12 @@ public class EjemplosArrays
      *  Invierte los valores de un array
      *  Arrays como valor de retorno
      */
-    public int[]  invertirV2(int[ ]  valores)
+    public int[]  invertirV2(int[]  valores)
     {
-        int longitud = valores.length;
-        int [] resultado = new int[longitud];
-
-        for (int i = 0; i <  longitud ; i++)
+        int [] resultado = new int[valores.length];
+        for (int i = 0; i <  valores.length ; i++)
         {
-            resultado[i] = valores[longitud - i - 1];
+            resultado[i] = valores[valores.length - i - 1];
         }
         return resultado;
     }
@@ -52,7 +48,7 @@ public class EjemplosArrays
      * muestra en pantalla los valores de un array
      * Arrays como argumentos
      */
-    public void   escribir(int[ ] valores)
+    public void   escribir(int[] valores)
     {
         for (int i = 0; i < valores.length;  i++)
         {
@@ -159,8 +155,15 @@ public class EjemplosArrays
         return false;
     }
 
-    
-
+    /**
+     * Búsqueda dicotómica o binaria
+     */
+    public boolean  buscarDicotomicaV3(int[ ] numeros, int valorBuscado)
+    {
+        Arrays.sort(numeros);
+        int p = Arrays.binarySearch(numeros, valorBuscado);
+        return p >= 0;
+    }
 
     /**
      *  
