@@ -35,12 +35,9 @@ public class ListaNumeros
     public boolean addElemento(int numero)
     {
         if (estaCompleta()) {
-            // System.out.println("completa");
             return false;
         }
         if (estaElemento(numero)) {
-            //			System.out.println("repetido");
-            //			System.out.print(numero + "\t");
             return false;
         }
 
@@ -133,7 +130,7 @@ public class ListaNumeros
      *  devuelve (0=>175, 1=>826, 2=>89, 3=>9, 4=>41, 5=>13,
      *  		 6=>72, 7=>11, 8=>23, 9=>107)
      * 
-     * Si la lista está vacía devuelve {}
+     * Si la lista está vacía devuelve ()
      */
     public String toString() 
     {
