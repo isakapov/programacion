@@ -1,0 +1,19 @@
+netFlix: 8900 :cine
+Candy Crush:10780:juegos
+you tube music: 6595 :musica
+Fotogramas:3457:cine
+Travel Club:4555:compras
+Sudoku:15000: juegos
+ikea:11976:compras
+you tube music:6595: musica
+Candy Crush:10780:juegos
+Buble shooter:15000:juegos
+ajedrez: 895 :juegos
+ebay :22987:compras
+zalando:7865:compras
+solitario: 500 :juegos
+sensacine:6541:cine
+netFlix: 8900 :cine
+Spotify Music:22510:musica
+wallapop:9234: compras 
+you tube music: 6595 :musica
