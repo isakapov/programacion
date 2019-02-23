@@ -68,15 +68,17 @@ public class Utilidades
      */
     public static boolean tieneLetrasRepetidas(String cadena)
     {
-        HashSet<Character> letras = new HashSet<>();
+       int letras = 0;
+        HashSet<Character> setLetras = new HashSet<>();
         cadena = cadena.toUpperCase();
         for (int i = 0; i < cadena.length(); i++) {
             char car = cadena.charAt(i);
             if (Character.isLetter(car)) {
-                letras.add(car);
+                setLetras.add(car);
+                letras++;
             }
         }
-        return cadena.length() != letras.size();
+        return letras != setLetras.size();
     }
 
     /**
