@@ -162,7 +162,7 @@ public class Texto
 			for (int i = 0; i < lista.size(); i++) {
 				Palabra palabra = lista.get(i);
 				sb.append(palabra.toString());
-				if ((i + 1) % 5 == 0 && i < lista.size() - 1) {
+				if ((i + 1) % 5 == 0) {
 					sb.append("\n\t");
 				}
 			}
