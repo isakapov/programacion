@@ -59,3 +59,7 @@
 #barraTitulo .button {
 	-fx-background-color:  grey      ;
 }
+
+.check-box {
+	-fx-text-fill: white ;
+}

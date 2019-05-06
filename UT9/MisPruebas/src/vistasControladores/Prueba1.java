@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -31,6 +32,7 @@ public class Prueba1 extends Application
 	private Label lblTexto;
 	private RadioButton rbtFrances;
 	private RadioButton rbtIngles;
+	private CheckBox cbxMayus;
 	private TextField txtNombre;
 
 	@Override
@@ -223,7 +225,7 @@ public class Prueba1 extends Application
 			@Override
 			public void handle(ActionEvent arg0) {
 
-				enFrances();
+				saludarFrances();
 
 			}
 		});
@@ -236,17 +238,28 @@ public class Prueba1 extends Application
 
 		panel.getChildren().addAll(btnFrances, btnIngles);
 
+		cbxMayus = new CheckBox("En mayúsculas");
+		panel.getChildren().add(cbxMayus);
+
 		return panel;
 	}
 
 	private void saludarIngles() {
 
-		lblTexto.setText(saludo.saludarIngles());
+		String mensaje = saludo.saludarIngles();
+		if (cbxMayus.isSelected()) {
+			mensaje = mensaje.toUpperCase();
+		}
+		lblTexto.setText(mensaje);
 	}
 
-	private void enFrances() {
+	private void saludarFrances() {
 
-		lblTexto.setText(saludo.saludarFrances());
+		String mensaje = saludo.saludarFrances();
+		if (cbxMayus.isSelected()) {
+			mensaje = mensaje.toUpperCase();
+		}
+		lblTexto.setText(mensaje);
 
 	}
 
